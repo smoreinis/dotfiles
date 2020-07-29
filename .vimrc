@@ -31,3 +31,5 @@ endfunction
 augroup filetypedetect
 au WinEnter,BufNewFile,BufRead * call HighlightTooLongLines()
 augroup END
+
+autocmd BufWritePre * %s/\s\+$//e
